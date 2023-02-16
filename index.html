@@ -5,11 +5,36 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JKRowling Story</title>
+    <style>
+        .accent {
+            color: red;
+        }
+    </style>
 </head>
-<body>
-    <p>In the world of Harry Potter, there are four houses at Hogwarts School of Witchcraft and Wizardry: Gryffindor, Hufflepuff, Ravenclaw, and Slytherin. Each house is known for certain traits, such as bravery, hard work, intelligence, and cunning, respectively. Students are sorted into their houses based on the sorting hat's assessment of their personality and characteristics.</p>
-    <p>At Hogwarts, students are taught a variety of subjects by a variety of teachers. Professor Albus Dumbledore is the headmaster of Hogwarts, and is known for his wisdom, kindness, and fairness. Professor Minerva McGonagall is the strict but fair deputy headmistress and head of Gryffindor House. Professor Severus Snape is the potions master and head of Slytherin House, known for his harsh manner and loyalty to Voldemort. Professor Remus Lupin is the popular werewolf Defense Against the Dark Arts teacher, and Professor Rubeus Hagrid is the Keeper of Keys and Grounds and a friend to all students.</p>
-    <p>Other notable teachers at Hogwarts include Professor Filius Flitwick, the Charms professor and head of Ravenclaw House; Professor Pomona Sprout, the Herbology professor and head of Hufflepuff House; and Professor Sybil Trelawney, the divination professor known for her occasional accurate prophecies. Each of these teachers plays an important role in the education and development of the students at Hogwarts.</p>
-    <p>In addition to traditional academic subjects, students at Hogwarts also have the opportunity to study a variety of magical subjects, such as charms, defense against the dark arts, herbology, and care of magical creatures. These subjects are taught by specialized teachers and provide the students with the skills and knowledge they will need as they pursue their careers as witches and wizards. Overall, the houses and teachers at Hogwarts play a central role in the world of Harry Potter and help to shape the lives and futures of the students who attend the school.</p>    
+<body>                
+    <script>
+                
+        // Оголошення змінних const/var/let nameOfVariable = '';
+        // Використання teachers[0], mainPerson, teachers.director
+
+        const mainPerson = "Frodo";
+
+        const mainSchool = "Ukraine";
+        const houses = ["Math", "Hufflepuff"];
+        const teachers = {
+            director: "Zelenskiy",
+            transfiguration: "McGonagall"
+        };
+        const countHouses = houses.length; 
+        const listOfHousesWithComa = houses.join(", ");        
+
+        document.body.innerHTML = `
+            <p>In the world of ${mainPerson}, there are ${countHouses} houses at ${mainSchool} School of Witchcraft and Wizardry: <span class="accent">${listOfHousesWithComa}</span>. Each house is known for certain traits, such as bravery, hard work, intelligence, and cunning, respectively. Students are sorted into their houses based on the sorting hat's assessment of their personality and characteristics.</p>
+            <p>At ${mainSchool}, students are taught a variety of subjects by a variety of teachers. Professor <span class="accent">${teachers.director}</span> is the headmaster of ${mainSchool}, and is known for his wisdom, kindness, and fairness. Professor Minerva ${teachers.transfiguration} is the strict but fair deputy headmistress and head of ${houses[0]} House. Professor Severus Snape is the potions master and head of ${houses[3]} House, known for his harsh manner and loyalty to Voldemort. Professor Remus Lupin is the popular werewolf Defense Against the Dark Arts teacher, and Professor Rubeus Hagrid is the Keeper of Keys and Grounds and a friend to all students.</p>
+            <p>Other notable teachers at <span class="accent">${mainSchool}</span> include Professor Filius Flitwick, the Charms professor and head of Ravenclaw House; Professor Pomona Sprout, the Herbology professor and head of ${houses[1]} House; and Professor Sybil Trelawney, the divination professor known for her occasional accurate prophecies. Each of these teachers plays an important role in the education and development of the students at ${mainSchool}.</p>
+            <p>In addition to traditional academic subjects, students at ${mainSchool} also have the opportunity to study a variety of magical subjects, such as charms, defense against the dark arts, herbology, and care of magical creatures. These subjects are taught by specialized teachers and provide the students with the skills and knowledge they will need as they pursue their careers as witches and wizards. Overall, the houses and teachers at ${mainSchool} play a central role in the world of ${mainPerson} and help to shape the lives and futures of the students who attend the school.</p>
+            <p>${listOfHousesWithComa}</p>
+        `;
+    </script>
 </body>
 </html>
